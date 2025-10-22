@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo">
+                <img src="skillswap-logo.png" alt="SkillSwap Logo"> <span class="skill">Skill</span><span class="swap">Swap</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a skill or user...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="user-menu">
+                <img src="user-avatar.png" alt="User Avatar" class="user-avatar"> <span class="welcome-text">Hello, Alex.</span>
+                <i class="fas fa-bell notification-icon"></i>
+                <i class="fas fa-caret-down dropdown-arrow"></i>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="card welcome-card">
+                <h2>Welcome back, Alex!</h2>
+                <p>You have <strong>3 new matches</strong> and <strong>1 pending swap request</strong>. Let's get learning!</p>
+            </div>
+
+            <div class="cards-row">
+                <div class="card skill-credits-card">
+                    <h3>My Skill Credits</h3>
+                    <div class="credits-display">
+                        <span class="credits-number">150</span>
+                        <i class="fas fa-coins credits-icon"></i>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary">View History</button>
+                        <button class="btn btn-secondary">How to Earn More</button>
+                    </div>
+                </div>
+
+                <div class="card your-skills-card">
+                    <h3>Your Skills</h3>
+                    <div class="skills-list">
+                        <h4>Skills I Can Teach:</h4>
+                        <ul>
+                            <li>Python Programming</li>
+                            <li>Guitar Basics</li>
+                            <li>Public Speaking</li>
+                        </ul>
+                        <h4>Skills I Want to Learn:</h4>
+                        <ul>
+                            <li>Adobe Photoshop</li>
+                            <li>Spanish Conversation</li>
+                            <li>Baking Sourdough</li>
+                        </ul>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary">Manage My Skills</button>
+                    </div>
+                </div>
+
+                <div class="card recommended-matches-card">
+                    <h3>Your Recommended Matches</h3>
+                    <div class="matches-list">
+                        <div class="match-mini-card">
+                            <img src="maria-avatar.png" alt="Maria Garcia" class="match-avatar">
+                            <div class="match-details">
+                                <span class="match-name">Maria Garcia</span>
+                                <span class="match-skill teaches">Teaches: Adobe Photoshop</span>
+                                <span class="match-skill wants-to-learn">Wants to Learn: Public Speaking</span>
+                            </div>
+                            <div class="match-actions">
+                                <button class="btn btn-text">View Profile</button>
+                                <button class="btn btn-primary">Request Swap</button>
+                            </div>
+                        </div>
+                        <div class="match-mini-card">
+                            <img src="ben-avatar.png" alt="Ben Carter" class="match-avatar">
+                            <div class="match-details">
+                                <span class="match-name">Ben Carter</span>
+                                <span class="match-skill teaches">Teaches: Spanish Conversation</span>
+                                <span class="match-skill wants-to-learn">Wants to Learn: Python Programming</span>
+                            </div>
+                            <div class="match-actions">
+                                <button class="btn btn-text">View Profile</button>
+                                <button class="btn btn-primary">Request Swap</button>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="card activity-requests-card">
+                <h3>Activity & Requests</h3>
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="incoming">Incoming Requests <span class="notification-badge">1</span></button>
+                    <button class="tab-button" data-tab="active">Active Swaps</button>
+                    <button class="tab-button" data-tab="completed">Completed Swaps</button>
+                </div>
+                <div class="tab-content" id="incoming-tab">
+                    <div class="request-item">
+                        <span>From David Lee: Wants to learn 'Guitar Basics' in exchange for 'Video Editing'.</span>
+                        <div class="request-actions">
+                            <button class="btn btn-primary">Accept</button>
+                            <button class="btn btn-secondary">Decline</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content hidden" id="active-tab">
+                    <div class="request-item">
+                        <span>You are teaching 'Python Programming' to Sarah Chen.</span>
+                        <span class="status-text">Status: Session 2 of 4 scheduled.</span>
+                        <div class="request-actions">
+                            <button class="btn btn-primary">Message Sarah</button>
+                            <button class="btn btn-secondary">Mark as Complete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content hidden" id="completed-tab">
+                    <p>No completed swaps yet. Get swapping!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

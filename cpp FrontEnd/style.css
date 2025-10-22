@@ -1,0 +1,450 @@
+/* General Body & Root Variables */
+:root {
+    --primary-blue: #007bff; /* Skill color */
+    --secondary-orange: #fd7e14; /* Swap color */
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray-text: #343a40;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--dark-gray-text);
+    line-height: 1.6;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--light-gray);
+    box-shadow: 0 0 20px var(--shadow-light);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures content doesn't spill out of rounded corners */
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-light);
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo .skill {
+    color: var(--primary-blue);
+}
+
+.logo .swap {
+    color: var(--secondary-orange);
+}
+
+.search-bar {
+    position: relative;
+    width: 300px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 15px 8px 40px; /* Left padding for icon */
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.search-bar .fa-search {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.95em;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--medium-gray);
+}
+
+.welcome-text {
+    font-weight: 500;
+}
+
+.notification-icon,
+.dropdown-arrow {
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.notification-icon {
+    position: relative;
+}
+
+/* Main Content Layout */
+.main-content {
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    gap: 20px;
+}
+
+/* Card Base Styling */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    border: 1px solid var(--medium-gray);
+}
+
+.card h2, .card h3 {
+    margin-top: 0;
+    color: var(--dark-gray-text);
+}
+
+/* Specific Card Layouts */
+.welcome-card {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background-color: #e6f7ff; /* Light blue background for welcome */
+    border: 1px solid var(--primary-blue);
+}
+.welcome-card h2 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+.welcome-card strong {
+    color: var(--secondary-orange);
+}
+
+
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.skill-credits-card {
+    flex: 1; /* Takes equal space */
+    min-width: 250px; /* Minimum width before wrapping */
+    text-align: center;
+}
+
+.credits-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.credits-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.credits-icon {
+    font-size: 2em;
+    color: var(--secondary-orange);
+}
+
+.your-skills-card {
+    flex: 1; /* Takes equal space */
+    min-width: 300px;
+}
+
+.your-skills-card h4 {
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed var(--medium-gray);
+    padding-bottom: 5px;
+}
+
+.your-skills-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.your-skills-card ul li {
+    padding: 5px 0;
+    color: #6c757d;
+}
+
+.recommended-matches-card {
+    flex: 2; /* Takes twice the space of the other cards in the row */
+    min-width: 400px;
+}
+
+.matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 400px; /* Make it scrollable if too many matches */
+    overflow-y: auto;
+    padding-right: 5px; /* For scrollbar */
+}
+
+.match-mini-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 6px;
+    padding: 10px 15px;
+    background-color: var(--light-gray);
+}
+
+.match-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-blue);
+}
+
+.match-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.match-name {
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: var(--dark-gray-text);
+}
+
+.match-skill {
+    font-size: 0.85em;
+}
+
+.match-skill.teaches {
+    color: var(--primary-blue);
+}
+
+.match-skill.wants-to-learn {
+    color: var(--secondary-orange);
+}
+
+.match-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Activity & Requests Card */
+.activity-requests-card {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid var(--medium-gray);
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #6c757d;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    color: var(--primary-blue);
+}
+
+.tab-button.active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+    font-weight: bold;
+}
+
+.notification-badge {
+    background-color: var(--secondary-orange);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7em;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+.request-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+.request-item:last-child {
+    border-bottom: none;
+}
+
+.request-item span {
+    flex-grow: 1;
+}
+
+.request-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    border: 1px solid var(--primary-blue);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--medium-gray);
+    color: var(--dark-gray-text);
+    border: 1px solid var(--medium-gray);
+}
+
+.btn-secondary:hover {
+    background-color: #dae0e5;
+    border-color: #dae0e5;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--primary-blue);
+    padding: 8px 10px;
+}
+
+.btn-text:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .search-bar {
+        width: 80%;
+    }
+    .user-menu {
+        width: 100%;
+        justify-content: center;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .cards-row {
+        flex-direction: column; /* Stack cards vertically */
+    }
+    .skill-credits-card,
+    .your-skills-card,
+    .recommended-matches-card {
+        flex: none; /* Remove flex growing */
+        width: 100%; /* Take full width */
+        min-width: unset; /* Remove min-width restriction */
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-header, .main-content {
+        padding: 15px;
+    }
+    .logo {
+        font-size: 1.2em;
+    }
+    .search-bar {
+        width: 100%;
+    }
+    .user-menu {
+        font-size: 0.9em;
+        gap: 10px;
+    }
+    .welcome-card h2 {
+        font-size: 1.5em;
+    }
+    .credits-number {
+        font-size: 2.5em;
+    }
+    .match-mini-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .match-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    .request-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .request-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    .tab-button {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}

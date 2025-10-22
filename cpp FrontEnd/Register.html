@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Create Account</title>
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+    background: url("TEST\ BG.webp") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+    .registration-container {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        max-width: 500px;
+        padding: 40px 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .registration-container:hover {
+        transform: translateY(-5px);
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .form-title {
+        text-align: center;
+        color: #222;
+        margin-bottom: 30px;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #444;
+        font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #dcdfe6;
+        border-radius: 8px;
+        font-size: 15px;
+        background: #fafafa;
+        transition: all 0.3s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #4a90e2;
+        background: #fff;
+        box-shadow: 0 0 6px rgba(74, 144, 226, 0.2);
+        outline: none;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .btn {
+        background: linear-gradient(135deg, #4a90e2, #357abd);
+        color: white;
+        border: none;
+        padding: 14px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+        background: linear-gradient(135deg, #357abd, #2f6cb3);
+        box-shadow: 0 4px 12px rgba(53, 122, 189, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .skill-colors {
+        color: #4a90e2;
+        font-weight: 700;
+    }
+
+    .swap-colors {
+        color: #ff7f50;
+        font-weight: 700;
+    }
+    .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    }
+
+    .logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <div class="logo-container">
+            <img src="Skill Swap Logo stciker.png" alt="SkillSwap Logo" class="logo">
+        </div>
+        
+        <h1 class="form-title">Create your <span class="skill-colors">Skill</span><span class="swap-colors">Swap</span> account!</h1>
+        
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone No.:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="skillsToTeach">Skills you know and can teach:</label>
+                <textarea id="skillsToTeach" name="skillsToTeach" placeholder="List the skills you can teach others..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="skillsToLearn">Skills you want to learn:</label>
+                <textarea id="skillsToLearn" name="skillsToLearn" placeholder="List the skills you want to learn..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="City, Country" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn">Sign Up</button>
+                <a href="Skill%20Swap%20LOGIN.html" style="display: block; text-align: center; margin-top: 15px; color: #4a90e2; text-decoration: none;">Already have an account? Login</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            // Form is valid, you can submit it to your server here
+            alert('Registration successful!');
+            // this.submit(); // Uncomment this line to actually submit the form
+        });
+    </script>
+</body>
+</html>

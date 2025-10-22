@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSwap - User Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .profile-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid #4a90e2;
+    }
+
+    .profile-header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    .profile-header p {
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: #4a90e2;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-item {
+      background-color: #e6f0ff;
+      color: #4a90e2;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .contact-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background-color: #4a90e2;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 2rem;
+      transition: background-color 0.2s;
+    }
+
+    .contact-btn:hover {
+      background-color: #357abd;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="user-avatar.png" alt="Profile Picture">
+      <h1>Alex</h1>
+      <p>Passionate learner and experienced developer</p>
+    </div>
+    
+    <div class="profile-section">
+      <h2 class="section-title">Skills I Can Teach</h2>
+      <ul class="skills-list">
+        <li class="skill-item">Python Programming</li>                  
+        <li class="skill-item">Guitar Basics</li>
+        <li class="skill-item">Public Speaking</li>
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <h2 class="section-title">Skills I Want to Learn</h2>
+      <ul class="skills-list">
+        <li class="skill-item">Adobe Photoshop</li>
+        <li class="skill-item">Spanish Conversation</li>
+        <li class="skill-item">Baking Sourdough</li>
+      </ul>
+    </div>
+    <div class="profile-section">
+      <h2 class="section-title">About Me</h2>
+      <p>I'm a full-stack developer always looking for new challenges. I believe in the power of shared knowledge and am excited to connect with new people to exchange skills and ideas.</p>
+    </div>
+
+    <a href="#" class="contact-btn">Propose a Skill Swap</a>
+  </div>
+</body>
+</html>
